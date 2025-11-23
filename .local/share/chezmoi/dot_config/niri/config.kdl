@@ -247,6 +247,7 @@ window-rule {
 }
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+  //  match app-id=r#"brave-browser$"#
     match app-id="zoom"
     open-floating true
 }

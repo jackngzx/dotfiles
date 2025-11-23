@@ -1,3 +1,4 @@
+max-history=20
 max-visible=1
 anchor=top-right
 font= "FiraCode Nerd Font" 9

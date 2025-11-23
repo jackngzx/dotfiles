@@ -162,6 +162,10 @@ environment {
   TERMINAL "alacritty"
   SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 }
+// === Lock screen when close lid ===
+switch-events {
+    lid-open {spawn "swaylock" "-f";}
+}
 hotkey-overlay {
     skip-at-startup
 }
@@ -289,6 +293,7 @@ binds {
     Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
     // === Security ===
+
     Mod+L hotkey-overlay-title="Lock Screen" {
         spawn-sh "swaylock --clock --indicator --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2";
     }

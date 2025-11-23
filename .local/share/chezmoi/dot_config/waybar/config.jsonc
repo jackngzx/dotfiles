@@ -83,8 +83,8 @@
       "format-connected": "󰂱 {device_alias}",
       "format-connected-battery":"󰂱 {device_alias} {device_battery_percentage}%",
       "format-no-controller": "",
-      "on-click": "alacritty -e bluetui",
-      "on-click-right": "rfkill toggle bluetooth"
+      "on-click-right": "alacritty -e bluetui",
+      "on-click": "rfkill toggle bluetooth"
     },
 
     "cpu": {

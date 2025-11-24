@@ -16,7 +16,7 @@
 
     "custom/wlogout": {
         "format": " 󰐥 {}",
-        "on-click": "~/.local/bin/fuzzel-powermenu.sh"
+        "on-click": "~/.config/scripts/fuzzel-powermenu.sh"
     },
 
     "custom/playerctl": {
@@ -104,7 +104,7 @@
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["󱃃", "󰔏", "󱃂"],
-        "on-click": "alacritty -e s-tui"
+        "on-click": "alacritty -e btop"
     },
 
     "battery": {
@@ -117,7 +117,8 @@
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰚥 {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "on-click-right": "~/.config/scripts/tuned_toggle.sh"
     },
 
     "network": {

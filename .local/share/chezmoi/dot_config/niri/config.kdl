@@ -161,8 +161,8 @@ overview {
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-// spawn-at-startup "waybar"
-spawn-sh-at-startup "swaybg -i $(find ~/Pictures/wallpaper/ -type f | shuf -n1) -m fill &"
+// spawn-sh-at-startup "swayidle -w timeout 15 'brightnessctl set 5%' resume 'brightnessctl set 35%'" // Dim screen when idle
+spawn-sh-at-startup "swaybg -i $(find ~/Pictures/wallpaper/ -type f | shuf -n1) -m fill &" // Set background at startup
 spawn-at-startup "swayosd-server"
 spawn-at-startup "systemctl" "enable" "tuned"
 spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
@@ -176,9 +176,9 @@ environment {
   SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 }
 // === Lock screen when close lid ===
-switch-events {
-    lid-open {spawn "swaylock" "-f";}
-}
+//switch-events {
+//    lid-open {spawn "swaylock" "-f";}
+//}
 hotkey-overlay {
     skip-at-startup
 }

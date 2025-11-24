@@ -36,14 +36,27 @@ config-notification {
     // automatically.
     position x=1280 y=0
 }
-
-
 gestures {
+    dnd-edge-view-scroll {
+        trigger-width 30
+        delay-ms 100
+        max-speed 1500
+    }
+
+    dnd-edge-workspace-switch {
+        trigger-height 50
+        delay-ms 100
+        max-speed 1500
+    }
+
     hot-corners {
-        off
+        // off
+        // top-left
+        // top-right
+        // bottom-left
+        // bottom-right
     }
 }
-
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input

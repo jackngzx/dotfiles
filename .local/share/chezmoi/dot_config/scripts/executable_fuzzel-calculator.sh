@@ -9,13 +9,19 @@
 PRECISION=4
 # Prompt text for fuzzel
 FUZZEL_PROMPT="Calc: "
-# Fuzzel dmenu-mode options (customize as needed)
-FUZZEL_OPTS="--dmenu --lines=0 --prompt \"$FUZZEL_PROMPT\""
 
-# Use fuzzel in dmenu mode to get input from the user.
-# The `--lines=0` and piping empty input (`echo ""`) ensures only the prompt/input box appears.
-# The `--dmenu` flag makes fuzzel act like dmenu, printing the final input to stdout.
-INPUT=$(echo "" | fuzzel $FUZZEL_OPTS)
+# Define Fuzzel options as a shell array to correctly handle the quoted prompt
+# The prompt variable $FUZZEL_PROMPT is now correctly quoted inside the array.
+FUZZEL_OPTS=(
+  "--dmenu"
+  "--lines=0"
+  "--prompt"
+  "$FUZZEL_PROMPT"
+)
+
+# Use the array expansion syntax "${FUZZEL_OPTS[@]}" with quotes
+# to pass all options as separate arguments.
+INPUT=$(echo "" | fuzzel "${FUZZEL_OPTS[@]}")
 
 # Check if the user entered anything
 if [ -z "$INPUT" ]; then

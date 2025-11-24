@@ -454,6 +454,9 @@ binds {
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+P { power-off-monitors; }
+    Mod+Y {
+      spawn-sh "swaybg -i $(find ~/Pictures/wallpaper/ -type f | shuf -n1) -m fill &"
+    }
 }
 debug {
     honor-xdg-activation-with-invalid-serial

@@ -63,6 +63,7 @@ gestures {
 input {
     keyboard {
         xkb {
+          options "caps:ctrl_modifier,ctrl:swapcaps"
         }
         numlock
     }

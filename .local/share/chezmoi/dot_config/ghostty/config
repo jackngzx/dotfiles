@@ -53,6 +53,6 @@ mouse-hide-while-typing = true
 background-opacity = 0.85
 font-family = JetBrainsMono Nerd Font
 font-size = 10
-
+confirm-close-surface = false
 # === Keybinds ===
 # keybind = ctrl+r=reload_config

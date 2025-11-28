@@ -70,13 +70,14 @@ input {
     touchpad {
       tap
       natural-scroll
-      scroll-factor 0.6
+      scroll-factor 0.5
       dwt
     }
     mouse {
     }
     trackpoint {
     }
+  focus-follows-mouse
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
@@ -287,7 +288,6 @@ binds {
     }
 
     // === Fuzzel Scripts ===
-    Mod+Grave hotkey-overlay-title="Fuzzel" {spawn "~/.config/scripts/fuzzel-toggle.sh";}
     Mod+X hotkey-overlay-title="System Power Menu" { spawn "~/.config/scripts/fuzzel-powermenu.sh";}
     Mod+Shift+C hotkey-overlay-title="Fuzzel Calculator" {spawn "~/.config/scripts/fuzzel-calculator.sh";}
 

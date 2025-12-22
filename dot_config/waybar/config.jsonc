@@ -1,0 +1,138 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "spacing": 3,
+
+    "modules-left": ["niri/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["group/tray-expander", "pulseaudio", "network", "bluetooth", "custom/platform-profile", "battery", "custom/power"],
+
+    "custom/power": {
+       "format": " ",
+       "on-click": "~/.config/scripts/fuzzel-powermenu.sh"
+    },
+    "niri/workspaces": {
+        "format": "<span size='larger'>{icon}</span>",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "\uf444",
+            "default": "\uf4c3"
+        },
+        "icon-size": 10,
+        "sort-by-number": true,
+    },
+
+    "clock": {
+        "format": "{:%d.%m.%Y | %I:%M %p}",
+        "on-click": "gnome-calendar"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "󰂰",
+        "format-bluetooth-muted": "󰂲 {icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰥰",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰄝",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format-alt": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format": "{icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+
+    },
+
+    "memory": {
+        "format": "\uf4bc  {used:0.1f}G",
+        "on-click": "ghostty -e btop"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["󱃃", "󰔏", "󱃂"],
+        "on-click": "ghostty -e btop"
+    },
+
+    "network": {
+        "format": "",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "ghostty -e gazelle"
+    },
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "ghostty -e bluetui"
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+
+    "custom/platform-profile": {
+        "tooltip": false,
+	      "format": "{icon}",
+	      "exec": "~/.config/scripts/platform_profile.sh",
+	      "return-type": "json",
+	      "restart-interval": 1,
+        "on-click": "~/.config/scripts/tuned_toggle.sh",
+	      "format-icons": {
+	        "low-power": "󰌪",
+	        "balanced": "󰗑",
+	        "performance": "󱡮",
+          "default": "?"
+	      },
+    },
+    "group/tray-expander": {
+        "orientation": "inherit",
+        "drawer": {
+        "transition-duration": 600,
+        "children-class": "tray-group-item"
+        },
+      "modules": ["custom/expand-icon", "tray"]
+  },
+    "custom/expand-icon": {
+        "format": "",
+        "tooltip": false
+  },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "\udb80\udd76",
+            "deactivated": "\udb83\udfaa"
+        }
+    }
+}

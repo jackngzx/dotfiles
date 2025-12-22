@@ -1,0 +1,41 @@
+@define-color foreground #d5c4a1;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #32302f;
+
+* {
+    font-family: FiraCode Nerd Font;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    color: @foreground;
+    padding-left: 0.7em;
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+}
+
+#memory,
+#temperature,
+#custom-platform-profile,
+#custom-power,
+#pulseaudio,
+#battery,
+#idle_inhibitor,
+#network,
+#bluetooth,
+#custom-expand-icon,
+#tray {
+    padding-right: 1em;
+}
+#custom-power {
+    padding-right: 0.7em;
+}

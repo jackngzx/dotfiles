@@ -58,7 +58,7 @@ window-decoration = none
 # === Keybinds ===
 keybind = ctrl+shift+r=reload_config
 keybind = ctrl+"=new_split:right
-keybind = ctrl+%=new_split:up
+keybind = ctrl+%=new_split:down
 keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+l=goto_split:right
 keybind = ctrl+shift+k=goto_split:top

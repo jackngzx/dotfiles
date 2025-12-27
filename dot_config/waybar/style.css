@@ -8,21 +8,28 @@
     padding: 0;
     margin: 0;
 }
-
+#clock {
+  font-size: 13.5px;
+}
 #waybar {
-    color: @foreground;
-    background-color: @background;
+    color: #b5b1a8;
+    background-color: black;
+    opacity: 0.75
+}
+window#waybar {
+      background: rgba(17, 17, 27, 0.7); /* Semi-transparent */
 }
 
 #workspaces button {
-    color: @foreground;
+    color: #b5b1a8;
     padding-left: 0.7em;
 }
 
 #workspaces button.empty {
-    color: @foreground-inactive;
+    color: #b5b1a8;
 }
 
+#clock,
 #memory,
 #temperature,
 #custom-platform-profile,

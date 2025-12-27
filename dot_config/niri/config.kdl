@@ -286,6 +286,7 @@ binds {
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "~/.config/scripts/fuzzel-toggle.sh";
     }
+    Mod+Shift+W hotkey-overlay-title="Reload Waybar" {spawn-sh "pkill waybar && waybar &"; }
 
     // === Fuzzel Scripts ===
     Mod+X hotkey-overlay-title="System Power Menu" { spawn "~/.config/scripts/fuzzel-powermenu.sh";}

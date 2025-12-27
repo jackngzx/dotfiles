@@ -1,4 +1,4 @@
-@define-color foreground #d5c4a1;
+@define-color foreground white;
 @define-color foreground-inactive #aaaaaa;
 @define-color background #32302f;
 
@@ -12,9 +12,9 @@
   font-size: 13.5px;
 }
 #waybar {
-  color: #b5b1a8;
+  color: @foreground;
   background-color: black;
-  opacity: 0.85
+  opacity: 0.9
 }
 
 window#waybar {
@@ -30,18 +30,21 @@ window#waybar {
   animation-direction: alternate;
 }
 
+#workspaces button label {
+  font-size: 13.5px;
+  padding: 0;
+  margin: 0;
+  color: @foreground;
+}
+
 #workspaces button {
-  padding: 0px 3px;
-  color: #b5b1a8;
+  padding: 0px 5px;
+  color: @foreground;
 }
 
 #custom-power {
-  color: #b5b1a8;
+  color: @foreground;
   padding-left: 0.7em;
-}
-
-#workspaces button {
-  padding: 0 5px;
 }
 
 #clock,

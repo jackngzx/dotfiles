@@ -10,7 +10,7 @@
   "modules-right": ["group/tray-expander", "pulseaudio", "network", "bluetooth", "custom/platform-profile", "battery", "clock"],
 
   "custom/power": {
-    "format": "",
+    "format": "",
     "on-click": "~/.config/scripts/fuzzel-powermenu.sh"
   },
   "niri/workspaces": {

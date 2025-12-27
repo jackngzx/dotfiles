@@ -5,23 +5,38 @@
     "height": 20,
     "spacing": 3,
 
-    "modules-left": ["niri/workspaces"],
+    "modules-left": ["custom/power", "niri/workspaces"],
     "modules-center": [],
-    "modules-right": ["group/tray-expander", "pulseaudio", "network", "bluetooth", "custom/platform-profile", "battery", "clock", "custom/power"],
+    "modules-right": ["group/tray-expander", "pulseaudio", "network", "bluetooth", "custom/platform-profile", "battery", "clock"],
 
     "custom/power": {
-       "format": " ",
+       "format": "",
        "on-click": "~/.config/scripts/fuzzel-powermenu.sh"
     },
     "niri/workspaces": {
-        "format": "<span size='larger'>{icon}</span>",
         "on-click": "activate",
+        "format": "{icon}",
         "format-icons": {
-            "active": "\uf444",
-            "default": "\uf4c3"
+          "default": "",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "0",
+          "active": "󱓻"
         },
-        "icon-size": 10,
-        "sort-by-number": true,
+          "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+          }
     },
 
     "clock": {
@@ -55,14 +70,15 @@
             "warning": 30,
             "critical": 20
         },
-        "format-alt": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰚥 {capacity}%",
+        "format-alt": "{icon} <span size='10pt'>{capacity}%</span>",
+        "format-charging": "󰂄 <span size='10pt'>{capacity}%</span>",
+        "format-plugged": "󰚥 <span size='10pt'>{capacity}%</span>",
         "format": "{icon}",
         "tooltip-format": "{capacity}% {time}",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "on-discharging-critical": "notify-send -u critical 'Battery Low' 'Battery is at 20%!'"
-
+        "events": {
+          "on-discharging-critical": "notify-send -u critical 'Battery Low' 'Battery is at 20%!'"
+        }
     },
 
     "memory": {

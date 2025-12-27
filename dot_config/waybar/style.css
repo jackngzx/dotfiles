@@ -22,8 +22,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -32,12 +31,17 @@ window#waybar {
 }
 
 #workspaces button {
+    padding: 0px 3px;
+    color: #b5b1a8;
+}
+
+#custom-power {
     color: #b5b1a8;
     padding-left: 0.7em;
 }
 
-#workspaces button.empty {
-    color: #b5b1a8;
+#workspaces button {
+    padding: 0 5px;
 }
 
 #clock,
@@ -54,6 +58,4 @@ window#waybar {
 #tray {
     padding-right: 1em;
 }
-#custom-power {
-    padding-right: 0.7em;
-}
+

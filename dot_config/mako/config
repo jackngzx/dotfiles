@@ -11,24 +11,17 @@ max-icon-size=48
 default-timeout=5000
 ignore-timeout=1
 
-# --- Tokyo Night Theme ---
-background-color=#1a1b26ff
-text-color=#c0caf5ff
-border-color=#7aa2f7ff
-progress-color=over #2ac3deff
+# Gruvbox Dark Soft Theme
+background-color=#32302f
+text-color=#ebdbb2
+border-color=#83a598
+progress-color=over #b8bb26
 
-# Low Urgency (Grey/Blue)
 [urgency=low]
-border-color=#3b4261ff
+border-color=#32302f
 default-timeout=2000
 
-# Normal Urgency (Blue/Cyan)
-[urgency=normal]
-border-color=#7aa2f7ff
-
-# High Urgency (Red/Orange)
 [urgency=critical]
-background-color=#1a1b26ff
-text-color=#f7768eff
-border-color=#f7768eff
+border-color=#fb4934
+text-color=#fb4934
 default-timeout=0

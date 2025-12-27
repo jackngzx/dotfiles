@@ -3,45 +3,45 @@
 @define-color background #32302f;
 
 * {
-    font-family: FiraCode Nerd Font;
-    font-size: 15px;
-    padding: 0;
-    margin: 0;
+  font-family: FiraCode Nerd Font;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
 }
 #clock {
   font-size: 13.5px;
 }
 #waybar {
-    color: #b5b1a8;
-    background-color: black;
-    opacity: 0.85
+  color: #b5b1a8;
+  background-color: black;
+  opacity: 0.85
 }
 
 window#waybar {
-      background: rgba(17, 17, 27, 0.7); /* Semi-transparent */
+  background: rgba(17, 17, 27, 0.7); /* Semi-transparent */
 }
 
 #battery.critical:not(.charging) {
-    color: red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #workspaces button {
-    padding: 0px 3px;
-    color: #b5b1a8;
+  padding: 0px 3px;
+  color: #b5b1a8;
 }
 
 #custom-power {
-    color: #b5b1a8;
-    padding-left: 0.7em;
+  color: #b5b1a8;
+  padding-left: 0.7em;
 }
 
 #workspaces button {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 #clock,
@@ -56,6 +56,6 @@ window#waybar {
 #bluetooth,
 #custom-expand-icon,
 #tray {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 

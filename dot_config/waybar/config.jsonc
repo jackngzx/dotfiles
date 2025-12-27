@@ -53,7 +53,7 @@
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
         "format-alt": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
@@ -61,6 +61,7 @@
         "format": "{icon}",
         "tooltip-format": "{capacity}% {time}",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "on-discharging-critical": "notify-send -u critical 'Battery Low' 'Battery is at 20%!'"
 
     },
 
